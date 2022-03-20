@@ -51,10 +51,57 @@ h1, h2 {
     border-bottom: 1px solid #3a3a3a;
 }
 
-/* Hero / header image*/
+/* Hero image*/
+
+#hero-outer {
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+
+    position: relative;
+}
+
+#cover-text, #cover-text h2 {
+    color: white;
+}
 
 #hero-image {
     height: 600px;
     width: 100%;
     background: url("../images/hero-image.webp") no-repeat center center;
+
+    /* animates zoom effect of loading page*/
+    animation: hero-zoom;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+/* Creates zoom for hero image */
+@keyframes hero-zoom {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+
+    }
+}
+
+#cover-text {
+    font-family: Oswald, sans-serif;
+    font-size: 130%;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+    width: 300px;
+    height: 200px;
+
+    padding-top: 40px;
+    padding-left: 10px;
+
+    background-color: rgb(241, 109, 107, .7);
+
+    bottom: 30px;
+    right: 150px;
+    position: absolute;
 }
